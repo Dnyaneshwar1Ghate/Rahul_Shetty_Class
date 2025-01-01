@@ -28,6 +28,7 @@ public class Locators2 {
 		Thread.sleep(2000);
 		System.out.println(driver.findElement(By.tagName("p")).getText());
 		Assert.assertEquals(driver.findElement(By.tagName("p")).getText(), "You are successfully logged in.");
+		Thread.sleep(3000);
 		Assert.assertEquals(driver.findElement(By.cssSelector("//div[@class='login-container']/h2")).getText(),"Hello " + name + ",");
 		driver.findElement(By.xpath("//*[text()='LogOut']")).click();
 		driver.close();
